@@ -30,4 +30,4 @@ Overall, Task 3 showcased the integration of backend data management, real-time 
 OUTPUT-
 
 
-
+<img width="1919" height="1079" alt="Image" src="https://github.com/user-attachments/assets/0424fa0c-74f4-42e0-b7ab-cdc1e5c4da1a" />
