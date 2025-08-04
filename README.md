@@ -1,31 +1,70 @@
-# REAL-TIME-COLLABORATIVE-DOCUMENT-EDITOR
+# Getting Started with Create React App
 
-COMPANY: CODTECH IT SOLUTIONS
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-NAME: ADITYA SINGH
+## Available Scripts
 
-INTERN ID: CT08DG601
+In the project directory, you can run:
 
-DOMAIN: FULL STACK
+### `npm start`
 
-DURATION: 8 WEEKS
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-MENTOR: NEELA SANTOSH
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-DESCRIPTION-
-Task 3 involved the design and development of a real-time collaborative document editor, a project that integrates multiple technologies to provide seamless, instantaneous editing experiences across different users. This task required building both a backend server to manage data storage and synchronization, and a frontend client application to provide a user-friendly interface for editing text collaboratively. The central objective was to ensure that multiple team members could simultaneously access and modify the same document, with all changes reflected in real time without conflicts or loss of data.
+### `npm test`
 
-The backend component was constructed using Node.js with the Express framework. This server handled the critical responsibilities of accepting, storing, and sharing document data. MongoDB, a NoSQL database, served as the persistent storage layer, retaining the document's state to ensure data durability and recovery across sessions. Mongoose, an Object Data Modeling (ODM) library for MongoDB in Node.js, was employed to define the document schema and facilitate interaction with the database. The schema was simple, focusing on a single document model containing the entire content as a string, which optimized for straightforward retrieval and update operations.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Crucially, real-time synchronization was enabled using Socket.IO, a library that enables bidirectional, event-based communication between the server and client. Setting up Socket.IO on the backend allowed the server to listen for changes from any connected client and broadcast these changes to all others instantly. This event-driven system ensured that as one user typed or modified the content, every other connected user saw these updates immediately. Additionally, Socket.IO was used to save the document continuously to the MongoDB backend to prevent data loss and maintain state consistency.
+### `npm run build`
 
-On the frontend, the editor was implemented using React.js, a widely-adopted JavaScript library for building user interfaces. The key focus of the frontend was simplicity and responsiveness, providing a text area where users could input and edit text. The editor communicated with the backend server via Axios for HTTP requests, fetching the initial content of the document when the application loaded, and Socket.IO for real-time, event-driven messaging to reflect ongoing changes. This hybrid approach ensured both persistent data retrieval and dynamic updating.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The frontend’s use of React hooks such as useEffect and useState allowed efficient management of lifecycle events and state. The useEffect hook ensured that WebSocket connections were established when the component mounted and properly cleaned up when unmounted, preventing resource leaks and duplicate event listeners. State management enabled the editor to both display current content and respond seamlessly to updates broadcast by other clients.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-To test the solution, multiple browser windows or tabs could be opened simultaneously. As users typed into one editor instance, correlation of the shared document was instantly visible on the others, demonstrating real-time collaboration without conflicts. Refreshing a page would retrieve the most recent saved data from the backend, proving that changes were successfully persisted in MongoDB between sessions.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Overall, Task 3 showcased the integration of backend data management, real-time socket communications, and modern frontend UI development to build an effective collaborative editor. The project addressed key challenges such as concurrent data modification, live synchronization, and persistent storage, producing an application that embodied both usability and technical robustness. It provided a foundational platform upon which further functionality—such as user management, version control, or richer text formatting—could be built, establishing essential expertise in full-stack development involving real-time web applications.
+### `npm run eject`
 
-OUTPUT-
-<img width="1919" height="1079" alt="Image" src="https://github.com/user-attachments/assets/3f6eee15-0c27-4eac-9654-3234f6a3d3a3" />
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
